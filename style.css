@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*? Css Variables */
+:root {
+    --blue: #217ca5;
+}
+
+/*? Regular Styles */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+input,
+button {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+form {
+    padding: 0 !important;
+    border: none !important;
+}
+
+.container {
+    max-width: 900px !important;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/*? - Book List Header - ?*/
+.book-list_title {
+    display: flex;
+    justify-content: center;
+}
+
+.book-list_title i {
+    margin-right: 10px;
+}
+
+.book-list_title :where(i, span) {
+    color: var(--blue);
+}
+
+/*? - Book List Form - ? */
+.book-lists_form {
+    margin: 30px auto 50px;
+}
+
+.form-control :where(div, input) {
+    position: relative !important;
+}
+
+.form-control label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    font-size: 1rem;
+    color: #000;
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: .25s;
+}
+
+.form-control div:focus-within label {
+    top: 4px;
+    left: .8rem;
+    font-size: .7rem !important;
+    color: hsl(0, 0%, 0%, .8);
+    transform: none;
+}
+
+.form-control div:focus-within input[type="text"] {
+    padding: 1.4rem .8rem .4rem !important;
+}
+
+.book-lists_form input[type="text"] {
+    padding: .7rem .75rem !important;
+}
+
+.book-lists_form label {
+    margin-bottom: 8px;
+}
+
+.book-lists_form #submit,
+.cancel {
+    background-color: var(--blue) !important;
+    border-radius: 1px;
+}
+
+/*? - Table of Books - ? */
+#books {
+    overflow-x: auto;
+}
+
+.table-books {
+    width: 100%;
+    margin-bottom: 100px;
+    border-collapse: collapse;
+}
+
+.table-books tr {
+    text-align: center;
+    border-top: 1px solid #999999;
+}
+
+.table-books th,
+td {
+    padding: 15px 20px !important;
+}
+
+.table-books tbody tr:nth-child(odd) {
+    background-color: #eff0f1;
+}
+
+.delete i,
+.edit i {
+    pointer-events: none;
+}
